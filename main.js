@@ -13,14 +13,16 @@ function getHumanChoice(choice) {
 
     let cleanChoice = choice.toLowerCase();
 
-    if (cleanChoice == 'rock') {
+    if (cleanChoice === 'rock') {
         return pickRock;
-    } else if (cleanChoice == 'paper') {
+    } else if (cleanChoice === 'paper') {
         return pickPaper;
-    } else if (cleanChoice == 'scissors') {
+    } else if (cleanChoice === 'scissors') {
         return pickScissors;
+    } else {
+        console.log('invalid selection');
+        return null;
     }
-    return null;
 }
 
 function playRound(humanChoice, computerChoice) {
